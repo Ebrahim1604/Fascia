@@ -1,0 +1,48 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+fascia_v1.name=Fascia V1
+fascia_v1.vid.0=0x1B4F
+fascia_v1.pid.0=0x0016
+fascia_v1.vid.1=0x1B4F
+fascia_v1.pid.1=0xF016
+fascia_v1.upload.tool=bossac18
+fascia_v1.upload.protocol=sam-ba
+fascia_v1.upload.maximum_size=507904
+fascia_v1.upload.offset=0x4000
+fascia_v1.upload.use_1200bps_touch=true
+fascia_v1.upload.wait_for_upload_port=true
+fascia_v1.upload.native_usb=true
+fascia_v1.build.mcu=cortex-m4
+fascia_v1.build.f_cpu=120000000L
+fascia_v1.build.usb_product="Fascia"
+fascia_v1.build.usb_manufacturer="Fascia"
+fascia_v1.build.board=FASCIA_V1
+fascia_v1.build.core=arduino51
+fascia_v1.build.extra_flags=-D__SAMD51J20A__ -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+fascia_v1.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+fascia_v1.build.openocdscript=openocd_scripts/arduino_zero.cfg
+fascia_v1.build.variant=FASCIA_V1
+fascia_v1.build.variant_system_lib=
+fascia_v1.build.vid=0x1B4F
+fascia_v1.build.pid=0xF016
+fascia_v1.bootloader.tool=openocd
+fascia_v1.bootloader.file=SAMD51/bootloader-sfe-samd51-thing-v2.0.0-34-ga8591b7-dirty.bin
+fascia_v1.compiler.arm.cmsis.ldflags="-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+fascia_v1.menu.cache.on=Enabled
+fascia_v1.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+fascia_v1.menu.cache.off=Disabled
+fascia_v1.menu.cache.off.build.cache_flags=
